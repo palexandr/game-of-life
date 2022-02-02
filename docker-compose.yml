@@ -1,0 +1,10 @@
+version: '3.1'
+
+services:
+  b_php:
+    image: php:8.0-fpm-bullseye
+    container_name: b_php
+    restart: unless-stopped
+    working_dir: /var/www
+    volumes:
+      - ./src/:/var/www
